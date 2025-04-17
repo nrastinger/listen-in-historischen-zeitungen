@@ -42,18 +42,6 @@
                                     <label for="listTypeFilter">Filter nach Typ:</label>
                                     <select id="listTypeFilter" class="form-control" style="max-width: 300px;">
                                         <option value="">Alle</option>
-                                        
-                                       <!--dropdown-menu--> 
-                                        <xsl:for-each-group select="//*:bibl/tei:note[@type='listType']" group-by=".">
-                                            <xsl:sort select="current-grouping-key()"/>
-                                            <option>
-                                                <xsl:attribute name="value">
-                                                    <xsl:value-of select="current-grouping-key()"/>
-                                                </xsl:attribute>
-                                                <xsl:value-of select="current-grouping-key()"/>
-                                            </option>
-                                        </xsl:for-each-group>
-
                                     </select>
                                 </div>
                                 <table class="table table-striped display" id="tocTable"
