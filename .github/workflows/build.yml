@@ -1,0 +1,36 @@
+name: Build and publish
+
+on:
+  workflow_dispatch
+
+jobs:
+  build_pages:
+    name: Publish as GitHub Pages Website
+    runs-on: ubuntu-latest
+    steps:
+    - name: Perform Checkout
+      uses: actions/checkout@v4
+    - name: Install Saxon, Ant and Fundament
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends openjdk-11-jre-headless ant
+        chmod +x ./shellscripts/script.sh ./shellscripts/dl_saxon.sh
+        ./shellscripts/script.sh
+    - name: Install Ant-Contrib
+      run: |
+        wget https://repo1.maven.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
+        mv ant-contrib-1.0b3.jar /usr/share/ant/lib
+    - name: Prepare Data
+      run: |
+        ant -f ./build.xml
+    - name: Upload built site #step only for testing purposes - can be deleted for actual deployment
+      uses: actions/upload-artifact@v4
+      with:
+        name: built-html
+        path: ./html
+    - name: Deploy
+      if: false #disable this for now (testing) - delete row for deployment
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        publish_dir: ./html
