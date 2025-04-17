@@ -14,7 +14,7 @@
         <fileset dir="${target}" includes="*.html"/>
     </delete>
 
-    <xslt basedir="${lists}" destdir="${tmpDir}" includes="*.xml" extension=".xml"
+   <!--<xslt basedir="${lists}" destdir="${tmpDir}" includes="*.xml" extension=".xml"
         style="./xslt/sort.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -37,7 +37,7 @@
         <fileset dir="${tmpDir}"/>
     </move>
 
-    <delete dir="${tmpDir}"/>
+    <delete dir="${tmpDir}"/>-->
 
     <xslt in="./data/imprint.xml" out="${target}/imprint.html" style="./xslt/imprint.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
