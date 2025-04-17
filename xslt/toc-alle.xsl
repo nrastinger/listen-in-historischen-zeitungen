@@ -27,7 +27,7 @@
                     <div class="container">
                         <div class="card">
                             <div class="card-header">
-                                <h1>Alle Rezeptionszeugnisse</h1>
+                                <h1>Periodisch publizierte Listen in Zeitungen und Intelligenzblättern, 1600-1850</h1>
                             </div>
                             <div class="card-body">
                                 <div id="container"
@@ -42,7 +42,8 @@
                                     style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Listentitel</th>
+                                            <th scope="col">Listentypus</th>
+                                            <th scope="col">Litel</th>
                                             <th scope="col">Periodikum</th>
                                             <th scope="col">Frühester Nachweis</th>
                                             <th scope="col">Spätester Nachweis</th>

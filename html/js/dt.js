@@ -97,6 +97,15 @@ function createDataTable(containerElement, order, pageLength) {
                     $(this).focus()[0].setSelectionRange(cursorPosition, cursorPosition);
                 });
             });
+            // Dropdown filter for listType
+            $('#listTypeFilter').on('change', function () {
+                const selected = $(this).val();
+                if (selected) {
+                    api.column(0).search('^' + selected + '$', true, false).draw();
+                } else {
+                    api.column(0).search('').draw();
+                }
+            });
             hideSearchInputs(containerElement, api.columns().responsiveHidden().toArray());
         }
     });
