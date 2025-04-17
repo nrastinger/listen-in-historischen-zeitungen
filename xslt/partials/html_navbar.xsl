@@ -45,6 +45,9 @@
                                             href="https://github.com/laurauntner/sappho-digital">Daten auf
                                             GitHub</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link" href="map.html">Karte</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
