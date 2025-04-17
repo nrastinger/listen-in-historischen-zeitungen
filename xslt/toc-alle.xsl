@@ -42,27 +42,31 @@
                                     style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Jahr</th>
-                                            <th scope="col">Titel</th>
-                                            <th scope="col">Autor_in</th>
-                                            <th scope="col">Gattung</th>
+                                            <th scope="col">Listentitel</th>
+                                            <th scope="col">Periodikum</th>
+                                            <th scope="col">Frühester Nachweis</th>
+                                            <th scope="col">Spätester Nachweis</th>
+                                            <th scope="col">Publikationsort</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <xsl:for-each
-                                            select="document('../data/lists/sappho-rez_alle.xml')//*:listBibl/*:bibl">
+                                            select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
                                             <tr>
                                                 <td>
-                                                  <xsl:value-of select="child::*:date"/>
+                                                  <xsl:value-of select="tei:title[@type='main']"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="child::*:title"/>
+                                                  <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="child::*:author"/>
+                                                  <xsl:value-of select="tei:date[@type='earliestFinding']"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="child::*:note"/>
+                                                  <xsl:value-of select="tei:date[@type='latestFinding']"/>
+                                                </td>
+                                                <td>
+                                                  <xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>
