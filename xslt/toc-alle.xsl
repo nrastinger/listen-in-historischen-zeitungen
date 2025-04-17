@@ -30,7 +30,7 @@
                                 <h1>Periodisch publizierte Listen in Zeitungen und Intelligenzblättern, 1600-1850</h1>
                             </div>
                             <div style="width: 100%;">
-                                <img src="/images/deco-banner.png" alt="Decorative banner" style="width: 100%; height: auto; display: block; margin-bottom: 2em;"/>
+                                <img src="images/deco-banner.png" alt="Decorative banner" style="width: 100%; height: auto; display: block; margin-bottom: 2em;"/>
                             </div>
                             <div class="card-body">
                                 <div id="container"
