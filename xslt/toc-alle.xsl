@@ -38,12 +38,30 @@
                                         style="margin: auto; width: 30%; height: 200px;"/>
                                 </div>
                                 <script src="./js/statistics.js"/>
+                                <div class="filters mb-3">
+                                    <label for="listTypeFilter">Filter nach Typ:</label>
+                                    <select id="listTypeFilter" class="form-control" style="max-width: 300px;">
+                                        <option value="">Alle</option>
+                                        
+                                       <!--dropdown-menu--> 
+                                        <xsl:for-each-group select="//*:bibl/tei:note[@type='listType']" group-by=".">
+                                            <xsl:sort select="current-grouping-key()"/>
+                                            <option>
+                                                <xsl:attribute name="value">
+                                                    <xsl:value-of select="current-grouping-key()"/>
+                                                </xsl:attribute>
+                                                <xsl:value-of select="current-grouping-key()"/>
+                                            </option>
+                                        </xsl:for-each-group>
+
+                                    </select>
+                                </div>
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col">Listentypus</th>
-                                            <th scope="col">Litel</th>
+                                            <th scope="col">Listentitel</th>
                                             <th scope="col">Periodikum</th>
                                             <th scope="col">Frühester Nachweis</th>
                                             <th scope="col">Spätester Nachweis</th>
@@ -54,6 +72,9 @@
                                         <xsl:for-each
                                             select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
                                             <tr>
+                                                <td>
+                                                  <xsl:value-of select="tei:note[@type='listType']"/>
+                                                </td>
                                                 <td>
                                                   <xsl:value-of select="tei:title[@type='main']"/>
                                                 </td>
