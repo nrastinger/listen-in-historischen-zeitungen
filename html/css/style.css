@@ -460,3 +460,8 @@ a:hover {
     font-family: 'Geist';
     src: url('../fonts/geist-sans-latin-200-normal.woff2') format('woff2');
 }
+
+#biblTable {
+    display: none !important;
+  }
+  
