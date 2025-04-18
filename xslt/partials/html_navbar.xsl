@@ -30,7 +30,7 @@
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="about.html">Zugang über Tabelle</a>
+                                            href="toc-alle.html">Zugang über Tabelle</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link" href="map.html">Zugang über Karte</a>
