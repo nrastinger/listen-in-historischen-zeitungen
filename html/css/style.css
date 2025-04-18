@@ -362,17 +362,6 @@ a:hover {
     color: rgba(94, 23, 235, 0.7);
 }
 
-#wrapper-footer-full {
-    margin-top: auto;
-    display: inline;
-    z-index: 1;
-    padding: 0.4rem 0;
-    font-size: small;
-    color: black;
-    border-top: 1px solid black;
-    text-align: center;
-}
-
 #wrapper-footer-full a {
     color: black;
 }
@@ -501,4 +490,31 @@ a:hover {
   .footer-imprint-bar a {
     color: #fff;
     text-decoration: underline;
+  }
+
+  #wrapper-footer-full {
+    display: flex;
+    align-items: center;
+    min-height: 97vh;
+  }
+  
+  .container-fluid {
+    min-height: 93vh;
+  }
+  
+  .footer-widget {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .footer-widget img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer-separator {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 1em 0;
+    text-align: center;
   }
