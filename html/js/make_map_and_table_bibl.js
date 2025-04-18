@@ -12,7 +12,14 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
     minZoom: map_cfg.min_zoom,
   }).addTo(map);
 
-  const markers = L.markerClusterGroup();
+  //before: const markers = L.markerClusterGroup();
+  const markers = L.markerClusterGroup({
+    polygonOptions: {
+      color: '#cc0000',
+      fillColor: '#ffaaaa'
+    }
+  });
+  
   const tableRows = tableElement.querySelectorAll("tbody tr");
 
   tableRows.forEach(row => {
