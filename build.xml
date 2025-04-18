@@ -101,10 +101,4 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-    <xslt in="./data/lists/tei_output.xml" out="${target}/map.html"
-        style="./xslt/bibl_map_table.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-
 </project>
