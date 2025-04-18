@@ -26,7 +26,26 @@
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Projekt</a>
+                                    data-bs-toggle="dropdown" aria-expanded="false">Index der Listen</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="about.html">Zugang über Tabelle</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link" href="map.html">Zugang über Karte</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="https://github.com/nrastinger/listen-in-historischen-zeitungen">Daten auf
+                                            GitHub</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    >Dokumentation</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
@@ -34,46 +53,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="bibliographie.html">Bibliographie</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="buch.html">Primärtexte</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="https://github.com/laurauntner/sappho-digital">Daten auf
-                                            GitHub</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link" href="map.html">Karte</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"
-                                    >Rezeptionszeugnisse</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-alle.html">Alle Rezeptionszeugnisse</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-prosa.html">Prosa</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-lyrik.html">Lyrik</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-drama.html">Drama</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-sonstige.html">Sonstiges</a>
+                                            href="list-types.html">Überblick über Listentypen</a>
                                     </li>
                                 </ul>
                             </li>
