@@ -16,7 +16,7 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="12" type="list">
+        <bibl xml:id="f12" type="list">
           <title type="main">Fremdenliste</title>
           <title type="alt">Ankommende</title>
           <title type="alt">Reisende</title>
@@ -31,18 +31,18 @@
           <date type="latestFinding" when="1800">1800</date>
           <pubPlace>
             <placeName>
-              <name>Nürnberg</name>
+              <name>Wien</name>
               <idno type="wikidata">Q3650</idno>
             </placeName>
             <location>
-              <geo>482082.0 1637838.0</geo>
+              <geo>48.208333 16.3725</geo>
             </location>
           </pubPlace>
           <note type="digitalResource">
             <ref target="https://digipress.digitale-sammlungen.de/">digiPress</ref>
           </note>
         </bibl>
-        <bibl xml:id="14" type="list">
+        <bibl xml:id="f14" type="list">
           <title type="main">Fremdenliste</title>
           <note type="listType">Ankunftsliste</note>
           <note type="source">
@@ -55,16 +55,121 @@
           <date type="latestFinding" when="1800">1800</date>
           <pubPlace>
             <placeName>
-              <name>Nürnberg</name>
+              <name>Wien</name>
               <idno type="wikidata">Q3650</idno>
             </placeName>
             <location>
-              <geo>482.082 16.7838</geo>
+              <geo>48.208333 16.3725</geo>
             </location>
           </pubPlace>
           <note type="digitalResource">
             <ref target="https://digipress.digitale-sammlungen.de/">digiPress</ref>
           </note>
+        </bibl>
+        <bibl xml:id="f15" type="list">
+          <title type="main">"Brod=Taxe."</title>
+          <note type="listType">Preisliste</note>
+          <note type="source">
+            <bibl type="periodical">
+              <title>Fürstlich-Wiedisches Regierungs- und Intelligenz-Blatt</title>
+              <idno type="zdb">12345-7</idno>
+            </bibl>
+          </note>
+          <date type="earliestFinding" when="1600">1600</date>
+          <date type="latestFinding" when="1850">1850</date>
+          <pubPlace>
+            <placeName>
+              <name>Wien</name>
+              <idno type="wikidata">nan</idno>
+            </placeName>
+            <location>
+              <geo>48.208333 16.3725</geo>
+            </location>
+          </pubPlace>
+        </bibl>
+        <bibl xml:id="f16" type="list">
+          <title type="main">"Fleisch=Taxe."</title>
+          <note type="listType">Preisliste</note>
+          <note type="source">
+            <bibl type="periodical">
+              <title>Fürstlich-Wiedisches Regierungs- und Intelligenz-Blatt</title>
+              <idno type="zdb">12345-8</idno>
+            </bibl>
+          </note>
+          <date type="earliestFinding" when="1600">1600</date>
+          <date type="latestFinding" when="1830">1830</date>
+          <pubPlace>
+            <placeName>
+              <name>Wien</name>
+              <idno type="wikidata">nan</idno>
+            </placeName>
+            <location>
+              <geo>48.208333 16.3725</geo>
+            </location>
+          </pubPlace>
+        </bibl>
+        <bibl xml:id="f17" type="list">
+          <title type="main">"Preis des neuen Korns zu Andernach auf dem dieswöchentl. Fruchtmarkte:"</title>
+          <note type="listType">Preisliste</note>
+          <note type="source">
+            <bibl type="periodical">
+              <title>Fürstlich-Wiedisches Regierungs- und Intelligenz-Blatt</title>
+              <idno type="zdb">12345-9</idno>
+            </bibl>
+          </note>
+          <date type="earliestFinding" when="1600">1600</date>
+          <date type="latestFinding" when="1840">1840</date>
+          <pubPlace>
+            <placeName>
+              <name>Riga</name>
+              <idno type="wikidata">nan</idno>
+            </placeName>
+            <location>
+              <geo>56.9475 24.106944</geo>
+            </location>
+          </pubPlace>
+        </bibl>
+        <bibl xml:id="f18" type="list">
+          <title type="main">"Preis des alten Korns:"</title>
+          <note type="listType">Preisliste</note>
+          <note type="source">
+            <bibl type="periodical">
+              <title>Fürstlich-Wiedisches Regierungs- und Intelligenz-Blatt</title>
+              <idno type="zdb">12345-10</idno>
+            </bibl>
+          </note>
+          <date type="earliestFinding" when="1600">1600</date>
+          <date type="latestFinding" when="1850">1850</date>
+          <pubPlace>
+            <placeName>
+              <name>Salzburg</name>
+              <idno type="wikidata">nan</idno>
+            </placeName>
+            <location>
+              <geo>47.8095 13.055</geo>
+            </location>
+          </pubPlace>
+        </bibl>
+        <bibl xml:id="f18" type="list">
+          <title type="main">"Preis des alten Korns:"</title>
+          <note type="listType">Preisliste</note>
+          <note type="source">
+            <bibl type="periodical">
+              <title>Fürstlich-Wiedisches Regierungs- und Intelligenz-Blatt</title>
+              <idno type="zdb">12345-10</idno>
+            </bibl>
+          </note>
+          <date type="earliestFinding" when="1600">1600</date>
+          <date type="latestFinding" when="1850">1850</date>
+          <pubPlace>
+            <placeName>
+              <name>Salzburg</name>
+              <idno type="wikidata">nan</idno>
+            </placeName>
+            <location>
+              <geo>47.81 13.055</geo>
+            </location>
+          </pubPlace>
         </bibl>
       </listBibl>
     </body>
