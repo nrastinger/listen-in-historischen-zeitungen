@@ -460,3 +460,45 @@ a:hover {
     font-family: 'Geist';
     src: url('../fonts/geist-sans-latin-200-normal.woff2') format('woff2');
 }
+
+.footer-separator {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  #wrapper-footer-full {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .textwidget.custom-html-widget p,
+  .textwidget.custom-html-widget a {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .textwidget.custom-html-widget img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer-widget {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-imprint-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .footer-imprint-bar a {
+    color: #fff;
+    text-decoration: underline;
+  }
