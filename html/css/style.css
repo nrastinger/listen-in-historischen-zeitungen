@@ -1,5 +1,7 @@
 .intro {
-    height: 93vh;
+    min-height: 60vh; /* More flexible */
+    height: auto;      /* Let content define height */
+    padding: 3em 0;     /* Add vertical spacing */
     overflow: hidden;
     border-bottom: 1px solid black;
     background-size: cover;
