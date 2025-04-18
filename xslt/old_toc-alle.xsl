@@ -15,10 +15,6 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <xsl:call-template name="html_head">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-
                     <xsl:with-param name="html_title" select="$doc_title"/>
                 </xsl:call-template>
                 <script src="https://code.highcharts.com/highcharts.js"/>
@@ -52,7 +48,7 @@
                                     </select>
                                 </div>
                                 <table class="table table-striped display" id="tocTable"
-                                    style="width:100%" id="sortable">
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col">Listentypus</th>
@@ -101,14 +97,7 @@
                         });
                     </script>
                 </div>
-            
-<script>
-  $(document).ready(function () {
-    $('#sortable').DataTable();
-  });
-</script>
-
-</body>
+            </body>
         </html>
     </xsl:template>
 </xsl:stylesheet>
