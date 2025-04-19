@@ -478,4 +478,11 @@ a:hover {
     border-bottom: 2px solid black;
   }
   
+.nav-link.dropdown-toggle {
+    background-color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    display: inline-block;
+  }
   
