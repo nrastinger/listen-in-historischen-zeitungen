@@ -6,7 +6,7 @@
         omit-xml-declaration="yes"/>
 
     <!--<xsl:import href="./partials/html_navbar.xsl"/>-->
-    <xsl:import href="./partials/new_html_head.xsl"/> <!--currently new version-->
+    <xsl:import href="./partials/html_head.xsl"/> <!--currently new version-->
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:template match="/">
@@ -55,7 +55,7 @@
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
-                    <!--currently not needed, already in header: <xsl:call-template name="nav_bar"/>-->
+                    <xsl:call-template name="nav_bar"/>
                     <div class="container">
                         <div class="card">
                             <div class="card-header">
