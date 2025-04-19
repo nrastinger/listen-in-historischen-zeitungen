@@ -1,7 +1,14 @@
 name: Build and publish
 
+#new workflow start - with every push to main:
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - main
+
+#commented out below is the old manual start option:
+#on:
+  #workflow_dispatch
 
 jobs:
   build_pages:
