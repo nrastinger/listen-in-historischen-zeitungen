@@ -16,9 +16,9 @@ function createDataTable(containerElement, order, pageLength) {
     
     var table = $(`#${containerElement}`).DataTable({
         columnDefs:[ {
-            orderable: false, targets: '_all'
+            orderable: true, targets: '_all'
         }, {
-            type: 'num', targets: 0
+            type: 'string', targets: 0
         }
         // sort according to bibl/@n
         ],
