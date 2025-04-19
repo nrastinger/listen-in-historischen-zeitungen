@@ -17,6 +17,34 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
                 </xsl:call-template>
+
+                <!-- Custom sort arrow styles for tocTable only -->
+                <style>
+                table.dataTable thead th {
+                    position: relative;
+                }
+
+                table.dataTable thead th.sorting:after,
+                table.dataTable thead th.sorting_asc:after,
+                table.dataTable thead th.sorting_desc:after {
+                    content: "";
+                    position: absolute;
+                    right: 8px;
+                    top: 50%;
+                    margin-top: -6px;
+                    border: 6px solid transparent;
+                }
+
+                table.dataTable thead th.sorting_asc:after {
+                    border-bottom-color: #999;
+                }
+
+                table.dataTable thead th.sorting_desc:after {
+                    border-top-color: #999;
+                }
+                </style>
+                <!--end of addition for sorting-->
+                
                 <script src="https://code.highcharts.com/highcharts.js"/>
                 <script src="https://code.highcharts.com/modules/timeline.js"/>
                 <script src="https://code.highcharts.com/modules/data.js"/>
