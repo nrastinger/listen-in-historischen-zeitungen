@@ -125,5 +125,43 @@
                 </div>
             </body>
         </html>
+        <!--new: individual page for each list entry-->
+        <xsl:for-each select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
+            <xsl:variable name="id" select="@xml:id"/>
+            <xsl:variable name="title" select="normalize-space(tei:title[@type='main'])"/>
+            <xsl:variable name="source" select="normalize-space(tei:note[@type='source']/tei:bibl/tei:title)"/>
+            
+            <xsl:result-document href="{$id}.html">
+                <html xmlns="http://www.w3.org/1999/xhtml">
+                    <head>
+                        <xsl:call-template name="html_head">
+                            <xsl:with-param name="html_title" select="$title"/>
+                        </xsl:call-template>
+                    </head>
+                    <body class="page">
+                        <div class="hfeed site" id="page">
+                            <xsl:call-template name="nav_bar"/>
+                            <div class="container">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h1><xsl:value-of select="$title"/></h1>
+                                        <h3><xsl:value-of select="$source"/></h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Display more details here -->
+                                        <p><strong>Listentypus:</strong> <xsl:value-of select="tei:note[@type='listType']"/></p>
+                                        <p><strong>Frühester Nachweis:</strong> <xsl:value-of select="tei:date[@type='earliestFinding']"/></p>
+                                        <p><strong>Spätester Nachweis:</strong> <xsl:value-of select="tei:date[@type='latestFinding']"/></p>
+                                        <p><strong>Publikationsort:</strong> <xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <xsl:call-template name="html_footer"/>
+                        </div>
+                    </body>
+                </html>
+            </xsl:result-document>
+        </xsl:for-each>
+        <!--end of new addition-->
     </xsl:template>
 </xsl:stylesheet>
