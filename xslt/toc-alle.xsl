@@ -106,7 +106,11 @@
                     <script>
                     $(document).ready(function () {
                         if (!$.fn.DataTable.isDataTable('#tocTable')) {
-                        $('#tocTable').DataTable();
+                        $('#tocTable').DataTable({
+                            language: {
+                                url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/de-DE.json'
+                                }
+                            });
                         }
                     });
                     </script>
