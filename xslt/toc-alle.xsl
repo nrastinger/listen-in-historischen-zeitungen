@@ -10,7 +10,7 @@
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Alle Rezeptionszeugnisse'"/>
+        <xsl:variable name="doc_title" select="'Liste der Listen'"/>
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -78,7 +78,9 @@
                                                   <xsl:value-of select="tei:note[@type='listType']"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="tei:title[@type='main']"/>
+                                                    <a href="{@xml:id}.html">
+                                                        <xsl:value-of select="tei:title[@type='main']"/>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                   <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/>
