@@ -23,6 +23,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end"
                         id="navbarSupportedContent">
+                        <div class="nav-dropdown-container">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
@@ -58,6 +59,7 @@
                                 </ul>
                             </li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
