@@ -15,13 +15,13 @@ function createDataTable(containerElement, order, pageLength) {
     $(`#${containerElement} thead tr`).clone(true).addClass('filters').appendTo(`#${containerElement} thead`);
     
     var table = $(`#${containerElement}`).DataTable({
-        columnDefs:[ {
-            orderable: true, targets: '_all'
-        }, {
-            type: 'string', targets: 0
-        }
+        // columnDefs:[ {
+            // orderable: true, targets: '_all'
+        //}, {
+            //type: 'string', targets: 0
+        //}
         // sort according to bibl/@n
-        ],
+        //],
         dom: "'<'row controlwrapper'<'col-sm-4'f><'col-sm-4'i><'col-sm-4 exportbuttons'Br>>'" +
         "'<'row'<'col-sm-12't>>'" +
         "'<'row'<'col-sm-6 offset-sm-6'p>>'",
