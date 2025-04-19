@@ -29,7 +29,7 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-    <xslt in="./data/lists/output_tei.xml" out="${target}/toc-alle.html"
+    <xslt in="./data/lists/tei_output.xml" out="${target}/toc-alle.html"
         style="./xslt/toc-alle.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
