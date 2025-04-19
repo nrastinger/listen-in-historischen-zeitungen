@@ -12,7 +12,7 @@
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Periodische Listen in historischen Zeitungen und Intelligenzblättern, 1600-1850'"/>
+        <xsl:variable name="doc_title" select="'Liste der Listen - Kartenansicht'"/>
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="de">
             <head>
@@ -31,9 +31,6 @@
                     <xsl:call-template name="nav_bar"/>
                     <div class="container">
                         <div class="card">
-                            <div class="card-header" style="text-align:center">
-                                <h1><xsl:value-of select="$doc_title"/></h1>
-                            </div>
                             <div class="card-body">
                                 <div id="map" style="height: 600px; width: 100%; margin-bottom: 2em;"></div>
                                 <table id="biblTable" class="table table-striped">
