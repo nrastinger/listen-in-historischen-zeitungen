@@ -479,10 +479,14 @@ a:hover {
   }
   
 .nav-dropdown-container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
     background-color: white;
     padding: 1rem;
-    border: 4px solid turquoise;
+    border: 12px solid #F8E5CC;
     border-radius: 0;
     display: inline-block;
     margin: 0.5rem auto;
+    z-index: 10;
 }
