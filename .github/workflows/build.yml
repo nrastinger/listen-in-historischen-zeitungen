@@ -36,7 +36,7 @@ jobs:
         name: built-html
         path: ./html
     - name: Deploy
-      if: false #disable this for now (testing) - delete row for deployment
+      #if: false #disables deployment for testing - comment this row out for deployment
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
