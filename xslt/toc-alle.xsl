@@ -48,10 +48,6 @@
                 }
                 </style>
                 <!--end of addition for sorting-->
-
-                <script src="https://code.highcharts.com/highcharts.js"/>
-                <script src="https://code.highcharts.com/modules/timeline.js"/>
-                <script src="https://code.highcharts.com/modules/data.js"/>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -61,24 +57,7 @@
                             <div class="card-header">
                                 <h1>Periodisch publizierte Listen in Zeitungen und Intelligenzblättern, 1600-1850</h1>
                             </div>
-                            <div style="width: 100%;">
-                                <img src="images/deco-banner.png" alt="Decorative banner" style="width: 100%; height: auto; display: block; margin-bottom: 2em;"/>
-                            </div>
                             <div class="card-body">
-                                <div id="container"
-                                    style="display: flex; justify-content: space-between; padding-bottom: 50px">
-                                    <div id="container-timeline"
-                                        style="margin: auto; width: 70%; height: 200px;"/>
-                                    <div id="container-genres"
-                                        style="margin: auto; width: 30%; height: 200px;"/>
-                                </div>
-                                <script src="./js/statistics.js"/>
-                                <div class="filters mb-3">
-                                    <label for="listTypeFilter">Filter nach Typ:</label>
-                                    <select id="listTypeFilter" class="form-control" style="max-width: 300px;">
-                                        <option value="">Alle</option>
-                                    </select>
-                                </div>
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>

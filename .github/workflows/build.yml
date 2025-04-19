@@ -30,11 +30,12 @@ jobs:
     - name: Prepare Data
       run: |
         ant -f ./build.xml
-    - name: Upload built site #step only for testing purposes - can be deleted for actual deployment
-      uses: actions/upload-artifact@v4
-      with:
-        name: built-html
-        path: ./html
+    #step only for testing purposes - can be deleted for actual deployment
+    #- name: Upload built site 
+      #uses: actions/upload-artifact@v4
+      #with:
+        #name: built-html
+        #path: ./html
     - name: Deploy
       #if: false #disables deployment for testing - comment this row out for deployment
       uses: peaceiris/actions-gh-pages@v3
