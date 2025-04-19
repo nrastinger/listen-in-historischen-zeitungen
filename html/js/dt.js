@@ -100,9 +100,7 @@ function createDataTable(containerElement, order, pageLength) {
             hideSearchInputs(containerElement, api.columns().responsiveHidden().toArray());
         }
     });
-    
-    $(`#${containerElement} thead th:first-child`).removeClass('sorting sorting_asc sorting_desc');
-    
+        
     table.responsive.recalc();
     
     table.on('draw.dt', function () {
