@@ -493,16 +493,35 @@ a:hover {
 
 .nav-title-box {
     position: absolute;
-    bottom: 1rem;
+    top: 50%;
     left: 1rem;
+    transform: translateY(-50%);
     background-color: #88DBDF;
-    padding: 1rem;
-    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
     font-size: 1.2rem;
     color: black;
+    text-align: center;
     z-index: 10;
     white-space: nowrap;
-    top: 50%;
-    transform: translateY(-50%);
+}
+
+.nav-title-box {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    
+    background-color: turquoise;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.4;
+    z-index: 10;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional for depth */
 }
 
