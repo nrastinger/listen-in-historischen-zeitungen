@@ -5,7 +5,7 @@
 
     <xsl:import href="html_navbar.xsl"/>
 
-    <xsl:template name="new_header">
+    <xsl:template name="html_head">
         <div class="custom-header">
             <img src="images/banner.png" alt="Banner" class="header-bg"/>
             <div class="header-overlay">
