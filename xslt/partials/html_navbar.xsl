@@ -23,6 +23,9 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end"
                         id="navbarSupportedContent">
+                        <div class="nav-title-box">
+                            <strong>Periodische Listen</strong></br>in historischen Zeitungen und Intelligenzblättern, 1600-1850
+                        </div>
                         <div class="nav-dropdown-container">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
