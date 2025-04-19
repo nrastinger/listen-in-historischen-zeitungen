@@ -5,8 +5,8 @@
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
         omit-xml-declaration="yes"/>
 
-    <xsl:import href="./partials/html_navbar.xsl"/>
-    <xsl:import href="./partials/html_head.xsl"/>
+    <!--<xsl:import href="./partials/html_navbar.xsl"/>-->
+    <xsl:import href="./partials/new_html_head.xsl"/> <!--currently new version-->
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:template match="/">
