@@ -7,6 +7,7 @@
     <xsl:import href="html_navbar.xsl"/>
 
     <xsl:template name="html_head">
+        <xsl:param name="html_title" select="$project_short_title"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
