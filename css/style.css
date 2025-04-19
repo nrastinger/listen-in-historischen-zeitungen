@@ -470,7 +470,7 @@ a:hover {
 
 .sticky-top {
     position: relative;
-    background-image: url('../images/banner.png');
+    background-image: url('../images/deco-banner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
