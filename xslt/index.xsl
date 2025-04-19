@@ -10,7 +10,7 @@
     
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select='"Sappho Digital"'/>
+            <xsl:value-of select='"Liste der Listen"'/>
         </xsl:variable>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
@@ -27,12 +27,7 @@
                         <div class="row intro">
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <div class="intro_left">
-                                    <h1 class="uppercase">Sappho Digital</h1>
-                                    <h3>Die literarische Sappho-Rezeption im deutschsprachigen
-                                        Raum</h3>
-                                    <p>Auf dieser Webseite werden Informationen zur literarischen
-                                        Sappho-Rezeption im deutschsprachigen Raum gesammelt.</p>
-                                    <p>–– work in progress ––</p>
+                                    <h1 class="uppercase">Periodische Listen in historischen Zeitungen und Intelligenzblättern, 1600-1850</h1>
                                     <button class="btn btn-secondary button"
                                         onclick="window.location.href='about.html'">Über das
                                         Projekt</button>
@@ -52,9 +47,8 @@
                                             />
                                         </div>
                                         <div class="card-header">
-                                            <h5>Rezeptionszeugnisse</h5>
-                                            <p>Verzeichnis deutschsprachiger
-                                                literarischer <br/>Rezeptionszeugnisse zu Sappho</p>
+                                            <h5>Überschrift 1</h5>
+                                            <p>Details<br/>zur Überschrift</p>
                                         </div>
                                     </div>
                                 </a>
@@ -69,9 +63,8 @@
                                             />
                                         </div>
                                         <div class="card-header">
-                                            <h5>Bibliographie</h5>
-                                            <p>Sekundärliteratur zur
-                                                literarischen <br/>Sappho-Rezeption</p>
+                                            <h5>Überschrift 2</h5>
+                                            <p>Details<br/>zur Überschrift</p>
                                         </div>
                                     </div>
                                 </a>

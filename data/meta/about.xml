@@ -6,8 +6,8 @@
                 <title type="main">Über das Projekt</title>
             </titleStmt>
             <publicationStmt>
-                <publisher>Laura Untner</publisher>
-                <pubPlace>Wien/Berlin</pubPlace>
+                <publisher>Nina C. Rastinger</publisher>
+                <pubPlace>Wien</pubPlace>
                 <date when="2025">2025</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
@@ -23,154 +23,7 @@
     <text>
         <body>
             <div>
-                <p>Im Laufe der Jahrhunderte wurden die Gedichte der antiken griechischen Dichterin
-                        <ref target="https://www.wikidata.org/wiki/Q17892">Sappho</ref> vielfach
-                    gepriesen, zitiert und, wie ihre Person, künstlerisch weitergedacht. Auch aus
-                    der deutschsprachigen Literaturgeschichte ist Sappho nicht wegzudenken: Mehr als
-                    1.000 literarische Texte vom 15. bis zum 21. Jahrhundert sind Zeugnis
-                    produktiv-literarischer Sappho-Rezeption. Diese Texte zitieren Sapphos Werk,
-                    bauen die Autorin als Figur ein, nehmen auf biographische Theorien und Legenden
-                    um sie Bezug und spannen ein intertextuelles Netz mit anderen
-                    Rezeptionszeugnissen. Aktuell ist im deutschsprachigen Raum ein starker Anstieg
-                    der Sappho-Rezeption zu beobachten.</p>
-            </div>
-            <div>
-                <p>Auf dieser Webseite sammle ich fortlaufend Informationen zur literarischen
-                    Sappho-Rezeption im deutschsprachigen Raum. Dahinter steht mein
-                    Dissertationsprojekt, das <ref target="https://doi.org/10.5281/zenodo.10698386"
-                        >hier</ref> beschrieben wird. Diesem Projekt ist eine jahrelange
-                    Beschäftigung mit der Sappho-Rezeption vorausgegangen, die unter anderem in
-                    einem <ref
-                        target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
-                        >Buch über die literarische Sappho-Rezeption im deutschsprachigen Raum</ref>
-                    mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption mit meinen
-                    Kenntnissen im Bereich der Digital Humanities.</p>
-                <p>Die <hi rend="bold">Daten</hi> werden sich letzten Endes aus drei Teilen
-                    zusammensetzen: einem für Menschen leicht lesbaren tabellarischen Verzeichnis
-                    aller bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
-                    deutschsprachigen Raum, einer deutlich komplexeren OWL-Ontologie mit
-                    detaillierten Informationen und einer SKOS-Taxonomie zur Klassifizierung
-                    wiederkehrender Elemente in der literarischen Sappho-Rezeption. Mit letzteren
-                    Datensätzen soll vor allem die computergestützte Analyse der Sappho-Rezeption im
-                    deutschsprachigen Raum erleichtert werden. Volltexte der Rezeptionszeugnisse
-                    werden zu keinem Zeitpunkt angeboten. Eine Textauswahl findet sich jedoch in
-                    meinem Band <hi rend="italics"><ref
-                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
-                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
-                            Raum</ref></hi> (2023).</p>
-                <p>Unter <hi rend="bold">produktiv-literarischen Rezeptionszeugnissen</hi> werden
-                    literarische Texte verstanden, die Elemente eines Rezeptionsgegenstandes
-                    enthalten, beispielsweise in der Form von Figuren- und Motivübernahmen,
-                    Stilimitationen, Paraphrasen, Strukturanalogien, Fortschreibungen und
-                    Fiktionalisierungen von Autor_innen.</p>
-                <p>Einen <hi rend="bold">Überblick</hi> über die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum bietet mein Band <hi rend="italics"><ref
-                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
-                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
-                            Raum</ref></hi> (2023). Eine <hi rend="bold">Auswahlbibliographie</hi>
-                    zur literarischen Sappho-Rezeption ist <ref target="bibliographie.html"
-                        >hier</ref> zu finden.</p>
-            </div>
-            <div>
-                <head>Projektstand</head>
-                <p>Aktuell ist das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so weit
-                    bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
-                    Zugänge angeboten: Es können Belege für <ref target="toc-alle.html">alle</ref>,
-                        <ref target="toc-prosa.html">prosaische</ref>, <ref target="toc-lyrik.html"
-                        >lyrische</ref>, <ref target="toc-drama.html">dramatische</ref> und <ref
-                        target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B. Comics)
-                    eingesehen werden.</p>
-                <p>Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
-                    durchsuchbar:</p>
-                <list>
-                    <item>Jahr der Erstveröffentlichung, oder, wenn bekannt, Jahr der
-                        Entstehung</item>
-                    <item>Titel</item>
-                    <item>Autor_innenname</item>
-                </list>
-                <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Ca. 300 der über 1.000
-                    Einträge sind noch nicht ausreichend bearbeitet, um sie abbilden zu können.
-                    Weitere bibliographische Informationen, etwa Ort und Verlag des Erstdrucks,
-                    werden erfasst, aber noch nicht dargestellt.</p>
-                <p><hi rend="bold">Excel-Tabellen</hi> mit den Daten aus den Verzeichnissen können
-                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI-Dateien</hi> sind
-                    über <ref
-                        target="https://github.com/laurauntner/sappho-digital/tree/main/data/lists"
-                        >GitHub</ref> frei zugänglich. Sie können diese Daten unter Nennung der
-                    Quelle gerne weiterverwenden.</p>
-            </div>
-            <div>
-                <head>Mithelfen/Kontakt</head>
-                <p>Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
-                    Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
-                    bin ich sehr dankbar: <ref target="mailto:laura.untner@fu-berlin.de"
-                        >laura.untner@fu-berlin.de</ref>.</p>
-                <p>Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
-                    freue ich mich. Am besten gleich ein Issue auf <ref
-                        target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
-                    anlegen.</p>
-                <p>Für Unterstützung bei der Recherche danke ich Julius Handl.</p>
-                <p>Für Feedback danke ich Amrei Stanzel, Martin Anton Müller, Gregor Pirgie und
-                    Dimitra Grigoriou.</p>
-            </div>
-            <div>
-                <head>Zitieren</head>
-                <p>Die bereitgestellten Daten können unter Nennung der Quelle frei weiterverwendet
-                    werden.</p>
-                <p>Wer diese <hi rend="bold">Webseite</hi> zitieren möchte, kann diese Vorlage
-                    verwenden:</p>
-                <p>Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum. Wien/Berlin 2024f., <ref
-                        target="https://sappho-digital.com">https://sappho-digital.com</ref>.</p>
-                <p>Wer auf das <hi rend="bold">Projekt</hi> selbst verweisen möchte, kann diese
-                    Vorlage verwenden:</p>
-                <p>Laura Untner: Paradigmen einer digitalen Rezeptionswissenschaft.
-                    Produktiv-literarische Rezeptionsphänomene als Linked Data am Beispiel der
-                    deutschsprachigen literarischen Sappho-Rezeption. In: Joëlle Weis, Estelle
-                    Bunout und Thomas Haider (Hg.): DHd 2024: DH Quo Vadis. 10. Tagung des Verbands
-                    »Digital Humanities im deutschsprachigen Raum« (DHd 2024). Passau 2024, <ref
-                        target="https://doi.org/10.5281/zenodo.10698386"
-                        >https://doi.org/10.5281/zenodo.10698386</ref>.</p>
-            </div>
-            <div>
-                <head>Über mich</head>
-                <p>Ich studierte Deutsche Philologie und Vergleichende Literaturwissenschaft an der
-                    Universität Wien. Von Dezember 2020 bis September 2024 arbeitete ich am Austrian
-                    Centre for Digital Humanities and Cultural Heritage (Österreichische Akademie
-                    der Wissenschaften). Dort beschäftigte ich mich vor allem mit Karl Kraus (<hi
-                        rend="italics"><ref target="https://www.kraus.wienbibliothek.at/"
-                            >Rechtsakten der Kanzlei Oskar Samek</ref></hi>, <hi rend="italics"><ref
-                            target="https://kraus1933.ace.oeaw.ac.at/index.html">Dritte
-                            Walpurgisnacht</ref></hi>) und Arthur Schnitzler (<hi rend="italics"
-                            ><ref target="https://schnitzler-briefe.acdh.oeaw.ac.at/">Briefwechsel
-                            mit Autorinnen und Autoren</ref></hi> und diverse <ref
-                        target="https://schnitzler.acdh.oeaw.ac.at/">Nebenprojekte</ref>).
-                    Ehrenamtlich leitete ich gemeinsam mit Julius Handl für viele Jahre die
-                    Literaturreihe <ref target="https://glaesernetexte.com/">Gläserne Texte</ref>.
-                    Als Vorstandsmitglied der <ref target="https://www.lesereihen.org/">Unabhängigen
-                        Lesereihen</ref> engagiere ich mich weiterhin für
-                    Literaturveranstaltungen.</p>
-                <p>Seit Oktober 2024 führe ich mein <ref
-                        target="https://doi.org/10.5281/zenodo.10698386">Dissertationsprojekt</ref>
-                    an der Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche
-                    Studien (Freie Universität Berlin) fort. Dort ist mein Projekt mit dem
-                    Exzellenzcluster »Temporal Communities« bzw. dem Projekt »<ref
-                        target="https://www.temporal-communities.de/research/digital-communities/projects/digital-observatory-world-literature"
-                        >Digital Observatory of World Literature</ref>« assoziiert. Betreut wird es
-                    von Frank Fischer (FU Berlin) und Paula Wojcik (Universität Wien).</p>
-                <p>Eine Auflistung meiner Publikationen ist auf <ref
-                        target="https://orcid.org/0000-0002-9649-0870">ORCID</ref> zu finden.</p>
-                <p>Bei Rückfragen stehe ich gerne unter <ref
-                        target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>
-                    zur Verfügung. Auf <ref target="https://bsky.app/profile/luntner.bsky.social"
-                        >Bluesky</ref> finden Sie mich ebenfalls.</p>
-            </div>
-            <div type="funding">
-                <head>Fördergeber</head>
-                <p>Gefördert von der Stadt Wien Kultur (MA 7 Wissenschaft)</p>
-                <figure>
-                    <graphic type="funding" url="images/Stadt_Wien_Kultur_pos_rgb.png"/>
-                </figure>
+                <p>Hier wird die Projektbeschreibung stehen.</p>
             </div>
         </body>
     </text>
