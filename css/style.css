@@ -481,7 +481,7 @@ a:hover {
 .nav-dropdown-container {
     position: absolute;
     bottom: 1rem;
-    right: 1rem;
+    right: 5rem;
     background-color: white;
     padding: 1rem;
     border: 12px solid #F8E5CC;
@@ -490,3 +490,19 @@ a:hover {
     margin: 0.5rem auto;
     z-index: 10;
 }
+
+.nav-title-box {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #88DBDF;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    color: black;
+    z-index: 10;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
