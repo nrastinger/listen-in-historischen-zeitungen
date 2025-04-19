@@ -22,29 +22,33 @@
                 <style>
                 table.dataTable thead th {
                     position: relative;
+                    cursor: pointer;
                 }
 
-                table.dataTable thead th.sorting:after,
-                table.dataTable thead th.sorting_asc:after,
-                table.dataTable thead th.sorting_desc:after {
-                    content: "";
+                table.dataTable thead th.sorting::after,
+                table.dataTable thead th.sorting_asc::after,
+                table.dataTable thead th.sorting_desc::after {
+                    font-size: 0.8em;
+                    content: "▲▼";
+                    color: #ccc;
                     position: absolute;
                     right: 8px;
                     top: 50%;
-                    margin-top: -6px;
-                    border: 6px solid transparent;
+                    transform: translateY(-50%);
                 }
 
-                table.dataTable thead th.sorting_asc:after {
-                    border-bottom-color: #999;
+                table.dataTable thead th.sorting_asc::after {
+                    content: "▲▼";
+                    color: #333;
                 }
 
-                table.dataTable thead th.sorting_desc:after {
-                    border-top-color: #999;
+                table.dataTable thead th.sorting_desc::after {
+                    content: "▲▼";
+                    color: #333;
                 }
                 </style>
                 <!--end of addition for sorting-->
-                
+
                 <script src="https://code.highcharts.com/highcharts.js"/>
                 <script src="https://code.highcharts.com/modules/timeline.js"/>
                 <script src="https://code.highcharts.com/modules/data.js"/>
