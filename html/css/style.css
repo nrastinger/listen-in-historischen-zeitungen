@@ -464,3 +464,12 @@ a:hover {
 #biblTable {
     display: none !important;
   }
+
+.sticky-top {
+    background-image: url('images/deco-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
