@@ -134,7 +134,7 @@ h3 {
 .navbar {
     border-bottom: 2px solid black;
     max-height: 100vh;
-    background-color: white;
+    background-color: transparent !important;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -470,6 +470,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 250px;
   }
   
   
