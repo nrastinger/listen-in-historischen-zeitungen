@@ -89,13 +89,24 @@
                         </div>
                     </div>
                     <xsl:call-template name="html_footer"/>
+                    <!--new version-->
+                    <script src="https://code.jquery.com/jquery-3.7.0.min.js"/>
+                    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"/>
+                    <script>
+                    $(document).ready(function () {
+                        if (!$.fn.DataTable.isDataTable('#tocTable')) {
+                        $('#tocTable').DataTable();
+                        }
+                    });
+                    </script>
+                    <!--old version 
                     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"/>
                     <script type="text/javascript" src="js/dt.js"/>
                     <script>
                         $(document).ready(function () {
                         createDataTable('tocTable');
                         });
-                    </script>
+                    </script>--> 
                 </div>
             </body>
         </html>
