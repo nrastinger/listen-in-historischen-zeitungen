@@ -503,13 +503,13 @@ a:hover {
     color: black;
     text-align: left;
     z-index: 10;
-    white-space: nowrap;
+    white-space: normal;
     line-height: 1.4;
     box-sizing: border-box;
-
     display: block;              /* make the link act like a div */
     text-decoration: none;       /* remove underline */
     cursor: pointer;             /* make it feel clickable */
+    overflow: hidden;
 }
 
 .nav-title-box:hover {
