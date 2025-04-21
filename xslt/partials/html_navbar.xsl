@@ -6,6 +6,9 @@
     <xsl:template match="/" name="nav_bar">
         <div class="sticky-top">
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
+            <div class="nav-title-box">
+                <strong>Periodische Listen</strong><br/>in historischen Zeitungen und Intelligenzblättern, 1600-1850
+            </div>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!--<a href="index.html" class="navbar-brand custom-logo-link" rel="home"
@@ -23,9 +26,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end"
                         id="navbarSupportedContent">
-                        <div class="nav-title-box">
-                            <strong>Periodische Listen</strong><br/>in historischen Zeitungen und Intelligenzblättern, 1600-1850
-                        </div>
+                        
                         <div class="nav-dropdown-container">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
