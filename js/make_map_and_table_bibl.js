@@ -15,7 +15,7 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
   const markers = L.markerClusterGroup({
     polygonOptions: {
       color: '#2ff6ef', //change line color of polygon
-      fillColor: '#2ff6ef' //change fill color of polygon
+      fillColor: '#88DBDF' //change fill color of polygon
     }
   });
 
