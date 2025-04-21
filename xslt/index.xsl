@@ -37,14 +37,14 @@
                     </div>
                     <div class="container-fluid">
                         <div class="row wrapper img_bottom">
-                            <div class="col-md-6 col-lg-6 col-sm-12">
+                            <!-- Card 1 -->
+                            <div class="col-md-4 col-lg-4 col-sm-12">
                                 <a href="toc-alle.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
                                             <img src="images/open-magazine.png"
                                                 title="open-magazine.png"
-                                                alt="Flaticon" class="smaller-img"
-                                            />
+                                                alt="Open Magazine" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Überschrift 1</h5>
@@ -53,18 +53,36 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12">
+
+                            <!-- Card 2 -->
+                            <div class="col-md-4 col-lg-4 col-sm-12">
                                 <a href="bibliographie.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
                                             <img src="images/search.png"
                                                 title="search.png"
-                                                alt="Flaticon" class="smaller-img"
-                                            />
+                                                alt="Search Icon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Überschrift 2</h5>
                                             <p>Details<br/>zur Überschrift</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-md-4 col-lg-4 col-sm-12">
+                                <a href="neue-seite.html" class="index-link">
+                                    <div class="card index-card d-flex flex-column">
+                                        <div class="card-body item-center">
+                                            <img src="images/new-icon.png"
+                                                title="new-icon.png"
+                                                alt="New Page Icon" class="smaller-img"/>
+                                        </div>
+                                        <div class="card-header">
+                                            <h5>Überschrift 3</h5>
+                                            <p>Details<br/>zur dritten Überschrift</p>
                                         </div>
                                     </div>
                                 </a>
