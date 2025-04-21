@@ -362,7 +362,7 @@ li {
 }
 
 a:hover {
-    color: rgba(94, 23, 235, 0.7);
+    color: #88DBDF;
 }
 
 #wrapper-footer-full {
@@ -515,7 +515,7 @@ a:hover {
 }
 
 .nav-title-box:hover {
-    background-color: #2ff6ef;   /* optional: subtle hover effect */
+    background-color: #2ff6ef;   /* hover effect */
     text-decoration: none;       /* keep link clean */
     color: black;                /* avoid color shift on hover */
 }
@@ -530,9 +530,9 @@ a:hover {
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background: #007bff;
+    background: #88DBDF;
     color: white !important;
-    border-color: #007bff;
+    border-color: #88DBDF;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
