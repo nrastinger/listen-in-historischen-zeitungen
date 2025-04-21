@@ -1,7 +1,6 @@
 .intro {
-    height: 93vh;
+    height: 10vh;
     overflow: hidden;
-    border-bottom: 1px solid black;
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -537,4 +536,12 @@ a:hover {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #e9ecef;
+}
+
+.index-card .card-body img {
+    width: 120px !important;
+    height: 120px !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover;
 }
