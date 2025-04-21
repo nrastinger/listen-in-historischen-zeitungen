@@ -492,6 +492,7 @@ a:hover {
 }
 
 .nav-title-box {
+    display: block;
     position: absolute;
     top: 50%;
     left: 1.5rem;
@@ -503,13 +504,14 @@ a:hover {
     color: black;
     text-align: left;
     z-index: 10;
-    white-space: normal;
+    white-space: nowrap;
     line-height: 1.4;
     box-sizing: border-box;
     display: block;              /* make the link act like a div */
     text-decoration: none;       /* remove underline */
-    cursor: pointer;             /* make it feel clickable */
-    overflow: hidden;
+    cursor: pointer;            /* make it feel clickable */
+    max-width: calc(100% - 3rem);
+    overflow: hidden;            
 }
 
 .nav-title-box:hover {
