@@ -47,8 +47,8 @@
                                                 alt="Open Magazine" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
-                                            <h5>Überschrift 1</h5>
-                                            <p>Details<br/>zur Überschrift</p>
+                                            <h5>Dokumentation</h5>
+                                            <p>Details<br/>zum Projekt</p>
                                         </div>
                                     </div>
                                 </a>
@@ -59,13 +59,13 @@
                                 <a href="bibliographie.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/search.png"
+                                            <img src="images/deco-banner.png"
                                                 title="search.png"
                                                 alt="Search Icon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
-                                            <h5>Überschrift 2</h5>
-                                            <p>Details<br/>zur Überschrift</p>
+                                            <h5>Index der Listen</h5>
+                                            <p>Zugang über Tabelle</p>
                                         </div>
                                     </div>
                                 </a>
@@ -76,13 +76,13 @@
                                 <a href="neue-seite.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/new-icon.png"
+                                            <img src="images/map-test.png"
                                                 title="new-icon.png"
                                                 alt="New Page Icon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
-                                            <h5>Überschrift 3</h5>
-                                            <p>Details<br/>zur dritten Überschrift</p>
+                                            <h5>Index der Listen</h5>
+                                            <p>Zugang über Karte</p>
                                         </div>
                                     </div>
                                 </a>
