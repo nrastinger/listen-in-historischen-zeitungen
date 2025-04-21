@@ -504,24 +504,7 @@ a:hover {
     text-align: center;
     z-index: 10;
     white-space: nowrap;
-}
-
-.nav-title-box {
-    position: absolute;
-
-    transform: translate(-50%, -50%);
-    
-    background-color: turquoise;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-
-    color: black;
     font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
     line-height: 1.4;
-    z-index: 10;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional for depth */
 }
 
