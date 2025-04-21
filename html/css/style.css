@@ -498,7 +498,7 @@ a:hover {
     left: 1.5rem;
     transform: translateY(-50%);
     background-color: #88DBDF;
-    padding: 1rem 2rem;
+    padding: 1rem 1.4rem;
     border-radius: 0;
     font-size: 1.8rem;
     color: black;
@@ -515,7 +515,7 @@ a:hover {
 }
 
 .nav-title-box:hover {
-    background-color: #16999f;   /* optional: subtle hover effect */
+    background-color: #2ff6ef;   /* optional: subtle hover effect */
     text-decoration: none;       /* keep link clean */
     color: black;                /* avoid color shift on hover */
 }
