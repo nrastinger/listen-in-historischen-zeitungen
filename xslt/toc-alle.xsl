@@ -54,16 +54,13 @@
                     <xsl:call-template name="nav_bar"/>
                     <div class="container">
                         <div class="card">
-                            <div class="card-header">
-                                <h1>Periodisch publizierte Listen in Zeitungen und Intelligenzblättern, 1600-1850</h1>
-                            </div>
                             <div class="card-body">
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Listentypus</th>
                                             <th scope="col">Listentitel</th>
+                                            <th scope="col">Listentypus</th>
                                             <th scope="col">Periodikum</th>
                                             <th scope="col">Frühester Nachweis</th>
                                             <th scope="col">Spätester Nachweis</th>
@@ -75,12 +72,12 @@
                                             select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
                                             <tr>
                                                 <td>
-                                                  <xsl:value-of select="tei:note[@type='listType']"/>
-                                                </td>
-                                                <td>
                                                     <a href="{@xml:id}.html">
                                                         <xsl:value-of select="tei:title[@type='main']"/>
                                                     </a>
+                                                </td>
+                                                <td>
+                                                    <xsl:value-of select="tei:note[@type='listType']"/>
                                                 </td>
                                                 <td>
                                                   <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/>
