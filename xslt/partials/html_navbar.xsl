@@ -6,9 +6,11 @@
     <xsl:template match="/" name="nav_bar">
         <div class="sticky-top">
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
-            <div class="nav-title-box">
-                <strong>Periodisch publizierte Listen</strong><br/>in Zeitungen und Intelligenzblättern, 1600-1850
-            </div>
+            <a href="index.html" class="nav-title-box">
+                <div class="nav-title-box">
+                    <strong>Periodisch publizierte Listen</strong><br/>in Zeitungen und Intelligenzblättern, 1600-1850
+                </div>
+            </a>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <!--<a href="index.html" class="navbar-brand custom-logo-link" rel="home"
