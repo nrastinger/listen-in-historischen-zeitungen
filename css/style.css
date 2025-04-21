@@ -538,22 +538,3 @@ a:hover {
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #e9ecef;
 }
-
-.marker-cluster-small {
-    background-color: #88DBDF;
-    color: #fff;
-    border: 2px solid #cae0e2;
-  }
-  
-  .marker-cluster-medium {
-    background-color: #88DBDF;
-    color: #fff;
-    border: 2px solid #cae0e2;
-  }
-  
-  .marker-cluster-large {
-    background-color: #88DBDF;
-    color: #fff;
-    border: 2px solid #cae0e2;
-  }
-  
