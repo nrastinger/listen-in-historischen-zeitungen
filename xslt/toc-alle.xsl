@@ -71,7 +71,7 @@
                                         <xsl:for-each
                                             select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
                                             <tr>
-                                                <td>
+                                                <td style="font-style: italic;">
                                                     <a href="{@xml:id}.html">
                                                         <xsl:value-of select="tei:title[@type='main']"/>
                                                     </a>

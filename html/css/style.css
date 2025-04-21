@@ -538,7 +538,3 @@ a:hover {
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
     background: #e9ecef;
 }
-
-#tocTable tbody td:nth-child(1) {
-    font-style: italic;
-}
