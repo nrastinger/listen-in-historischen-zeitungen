@@ -498,13 +498,12 @@ a:hover {
     transform: translateY(-50%);
     background-color: #88DBDF;
     padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.2rem;
+    border-radius: 0;
+    font-size: 1.8rem;
     color: black;
-    text-align: center;
+    text-align: left;
     z-index: 10;
     white-space: nowrap;
-    font-weight: bold;
     line-height: 1.4;
 }
 
