@@ -539,6 +539,6 @@ a:hover {
     background: #e9ecef;
 }
 
-#tocTable td.listentitel {
+#tocTable tbody td:nth-child(1) {
     font-style: italic;
 }
