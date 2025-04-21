@@ -505,5 +505,16 @@ a:hover {
     z-index: 10;
     white-space: nowrap;
     line-height: 1.4;
+
+    display: block;              /* make the link act like a div */
+    text-decoration: none;       /* remove underline */
+    cursor: pointer;             /* make it feel clickable */
 }
+
+.nav-title-box:hover {
+    background-color: #72c8d0;   /* optional: subtle hover effect */
+    text-decoration: none;       /* keep link clean */
+    color: black;                /* avoid color shift on hover */
+}
+
 
