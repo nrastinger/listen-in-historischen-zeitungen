@@ -1,22 +1,21 @@
+
 function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null) {
   const tableElement = document.getElementById("biblTable");
   const mapElement = document.getElementById(map_cfg.div_id);
 
   const map = L.map(mapElement).setView(map_cfg.initial_coordinates, map_cfg.initial_zoom);
 
-  const baseLayer = L.tileLayer(map_cfg.base_map_url, {
+  L.tileLayer(map_cfg.base_map_url, {
     attribution: map_cfg.attribution,
     subdomains: map_cfg.subdomains,
     maxZoom: map_cfg.max_zoom,
     minZoom: map_cfg.min_zoom,
-  });
-
-  baseLayer.addTo(map);
+  }).addTo(map);
 
   const markers = L.markerClusterGroup({
     polygonOptions: {
-      color: '#2ff6ef', // change line color of polygon
-      fillColor: '#88DBDF' // change fill color of polygon
+      color: '#2ff6ef', //change line color of polygon
+      fillColor: '#88DBDF' //change fill color of polygon
     }
   });
 
@@ -58,15 +57,4 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
   });
 
   map.addLayer(markers);
-
-  // ✅ ADD: Toggleable TMS (XYZ) Layer Support
-  if (tms_cfg && tms_cfg.layer) {
-    const overlays = {
-      [tms_cfg.label || "Overlay"]: tms_cfg.layer
-    };
-    const baseMaps = {
-      "Base Map": baseLayer
-    };
-    L.control.layers(baseMaps, overlays).addTo(map);
-  }
 }

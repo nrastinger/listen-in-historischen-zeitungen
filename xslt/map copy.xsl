@@ -67,19 +67,7 @@
                     <script src="js/map_table_cfg.js"></script>
                     <script src="js/make_map_and_table_bibl.js"></script>
                     <script>
-                    const historicalMapLayer = L.tileLayer(
-                        "https://wmts.oldmapsonline.org/maps/432e135b-b166-5bd5-a25e-5566e360d3a4/2019-08-19T13:34:32.410Z/{z}/{x}/{y}.png?key=7Omp1JJ2Ufb4qmEse3qh",
-                        {
-                        attribution: "© OldMapsOnline",
-                        maxZoom: 18,
-                        minZoom: 0
-                        }
-                    );
-
-                    build_map_and_table(map_cfg, table_cfg, null, {
-                        label: "Old Map (2019)",
-                        layer: historicalMapLayer
-                    });
+                        build_map_and_table(map_cfg, table_cfg, null, null);
                     </script>
                 </div>
             </body>
