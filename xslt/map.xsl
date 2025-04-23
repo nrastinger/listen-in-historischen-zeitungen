@@ -77,7 +77,7 @@
                     );
 
                     build_map_and_table(map_cfg, table_cfg, null, {
-                        label: "Old Map (2019)",
+                        label: "Historical Map (1740) (© OldMapsOnline)",
                         layer: historicalMapLayer
                     });
                     </script>
