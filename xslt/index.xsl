@@ -76,7 +76,7 @@
                                 <a href="neue-seite.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/map-test.png"
+                                            <img src="images/map.png"
                                                 title="new-icon.png"
                                                 alt="New Page Icon" class="smaller-img"/>
                                         </div>
