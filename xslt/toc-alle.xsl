@@ -144,15 +144,15 @@
                             <div class="container">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h1><xsl:value-of select="$title"/></h1>
+                                        <h2><xsl:value-of select="$title"/></h2>
                                         <h3><xsl:value-of select="$source"/></h3>
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body list-details">
                                         <!-- Display more details here -->
-                                        <p><strong>Listentypus:</strong> <xsl:value-of select="tei:note[@type='listType']"/></p>
-                                        <p><strong>Frühester Nachweis:</strong> <xsl:value-of select="tei:date[@type='earliestFinding']"/></p>
-                                        <p><strong>Spätester Nachweis:</strong> <xsl:value-of select="tei:date[@type='latestFinding']"/></p>
-                                        <p><strong>Publikationsort:</strong> <xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></p>
+                                        <p><strong>Listentypus:</strong>&#160;<xsl:value-of select="tei:note[@type='listType']"/></p>
+                                        <p><strong>Frühester Nachweis:</strong>&#160;<xsl:value-of select="tei:date[@type='earliestFinding']"/></p>
+                                        <p><strong>Spätester Nachweis:</strong>&#160;<xsl:value-of select="tei:date[@type='latestFinding']"/></p>
+                                        <p><strong>Publikationsort:</strong>&#160;<xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></p>
                                     </div>
                                 </div>
                             </div>

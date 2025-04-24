@@ -595,3 +595,13 @@ a:hover {
     font-size: 1rem;
     color: #555;
 }
+
+.list-details {
+    text-align: left;
+}
+
+.list-details p {
+    margin-bottom: 0.75em;
+}
+
+
