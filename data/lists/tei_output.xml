@@ -32,7 +32,7 @@
           <pubPlace>
             <placeName>
               <name>Wien</name>
-              <idno type="wikidata">Q3650</idno>
+              <idno type="wikidata">Q350</idno>
             </placeName>
             <location>
               <geo>48.208333 16.3725</geo>
@@ -41,6 +41,10 @@
           <note type="digitalResource">
             <ref target="https://digipress.digitale-sammlungen.de/">digiPress</ref>
           </note>
+          <figure>
+            <figDesc>Exemplarische Liste vom TT.MM.JJJJ</figDesc>
+            <graphic url="/images/deco-banner.png"/>
+          </figure>
         </bibl>
         <bibl xml:id="f14" type="list">
           <title type="main">Fremdenliste</title>
@@ -150,7 +154,7 @@
             </location>
           </pubPlace>
         </bibl>
-        <bibl xml:id="f19" type="list">
+        <bibl xml:id="f18" type="list">
           <title type="main">"Preis des alten Korns:"</title>
           <note type="listType">Preisliste</note>
           <note type="source">
