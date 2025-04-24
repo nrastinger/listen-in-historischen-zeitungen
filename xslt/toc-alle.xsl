@@ -157,12 +157,12 @@
                                                                 <th scope="row">Listentitel</th>
                                                                 <td><xsl:value-of select="tei:title[@type='main']"/></td>
                                                             </tr>
-                                                            <xsl:for-each select="tei:title[@type='alt']">
                                                                 <tr>
                                                                     <th scope="row">Alternativer Titel</th>
-                                                                    <td><xsl:value-of select="."/></td>
+                                                                    <td>
+                                                                    <xsl:value-of select="tei:title[@type='alt']" separator="; "/>
+                                                                    </td>
                                                                 </tr>
-                                                            </xsl:for-each>
                                                             <tr>
                                                                 <th scope="row">Listentypus</th>
                                                                 <td><xsl:value-of select="tei:note[@type='listType']"/></td>
