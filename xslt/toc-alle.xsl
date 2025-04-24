@@ -168,11 +168,11 @@
                                                                 <td><xsl:value-of select="tei:note[@type='listType']"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Periodikum</th>
+                                                                <th scope="row">Zeitung/Intelligenzblatt</th>
                                                                 <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">ZDB-ID</th>
+                                                                <th scope="row">ZDB-ID von Zeitung/Intelligenzblatt</th>
                                                                 <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']"/></td>
                                                             </tr>
                                                             <tr>
@@ -188,8 +188,10 @@
                                                                 <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Wikidata-ID</th>
-                                                                <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:idno[@type='wikidata']"/></td>
+                                                                <th scope="row">Wikidata-ID von Ort</th>
+                                                                <td>
+                                                                <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']" separator="; "/>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">Koordinaten</th>
@@ -197,7 +199,7 @@
                                                             </tr>
                                                             <xsl:if test="tei:note[@type='digitalResource']/tei:ref">
                                                                 <tr>
-                                                                    <th scope="row">Digitale Ressource</th>
+                                                                    <th scope="row">Verfügbar über</th>
                                                                     <td>
                                                                         <a>
                                                                             <xsl:attribute name="href">
