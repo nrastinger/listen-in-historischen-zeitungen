@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="card-header">
                                             <h5>Dokumentation</h5>
-                                            <p>Details<br/>zum Projekt</p>
+                                            <p>Details zum Projekt</p>
                                         </div>
                                     </div>
                                 </a>
