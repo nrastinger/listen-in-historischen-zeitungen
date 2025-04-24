@@ -144,98 +144,88 @@
                             <div class="container">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3><xsl:value-of select="$title"/>in <xsl:value-of select="$source"/></h3>
+                                        <h3><xsl:value-of select="$title"/> in <xsl:value-of select="$source"/></h3>
                                     </div>
                                     <div class="card-body list-details">
                                         <div class="card-body list-details">
-                                            <table class="table table-striped table-bordered" style="width:100%">
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">Listentitel</th>
-                                                        <td><xsl:value-of select="tei:title[@type='main']"/></td>
-                                                    </tr>
-                                                    <xsl:for-each select="tei:title[@type='alt']">
-                                                        <tr>
-                                                            <th scope="row">Alternativer Titel</th>
-                                                            <td><xsl:value-of select="."/></td>
-                                                        </tr>
-                                                    </xsl:for-each>
-                                                    <tr>
-                                                        <th scope="row">Listentypus</th>
-                                                        <td><xsl:value-of select="tei:note[@type='listType']"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Periodikum</th>
-                                                        <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">ZDB-ID</th>
-                                                        <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Frühester Nachweis</th>
-                                                        <td><xsl:value-of select="tei:date[@type='earliestFinding']"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Spätester Nachweis</th>
-                                                        <td><xsl:value-of select="tei:date[@type='latestFinding']"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Publikationsort</th>
-                                                        <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Wikidata-ID</th>
-                                                        <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:idno[@type='wikidata']"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Koordinaten</th>
-                                                        <td><xsl:value-of select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/></td>
-                                                    </tr>
-                                                    <xsl:if test="tei:note[@type='digitalResource']/tei:ref">
-                                                        <tr>
-                                                            <th scope="row">Digitale Ressource</th>
-                                                            <td>
-                                                                <a>
-                                                                    <xsl:attribute name="href">
-                                                                        <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref/@target"/>
-                                                                    </xsl:attribute>
-                                                                    <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref"/>
-                                                                </a>
-                                                            </td>
-                                                        </tr>
+                                            <div class="row">
+                                                <!-- Metadata Table -->
+                                                <div class="col-md-6">
+                                                    <table class="table table-striped table-bordered metadata-table" style="width:100%">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">Listentitel</th>
+                                                                <td><xsl:value-of select="tei:title[@type='main']"/></td>
+                                                            </tr>
+                                                            <xsl:for-each select="tei:title[@type='alt']">
+                                                                <tr>
+                                                                    <th scope="row">Alternativer Titel</th>
+                                                                    <td><xsl:value-of select="."/></td>
+                                                                </tr>
+                                                            </xsl:for-each>
+                                                            <tr>
+                                                                <th scope="row">Listentypus</th>
+                                                                <td><xsl:value-of select="tei:note[@type='listType']"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Periodikum</th>
+                                                                <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">ZDB-ID</th>
+                                                                <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Frühester Nachweis</th>
+                                                                <td><xsl:value-of select="tei:date[@type='earliestFinding']"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Spätester Nachweis</th>
+                                                                <td><xsl:value-of select="tei:date[@type='latestFinding']"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Publikationsort</th>
+                                                                <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Wikidata-ID</th>
+                                                                <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:idno[@type='wikidata']"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Koordinaten</th>
+                                                                <td><xsl:value-of select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/></td>
+                                                            </tr>
+                                                            <xsl:if test="tei:note[@type='digitalResource']/tei:ref">
+                                                                <tr>
+                                                                    <th scope="row">Digitale Ressource</th>
+                                                                    <td>
+                                                                        <a>
+                                                                            <xsl:attribute name="href">
+                                                                                <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref/@target"/>
+                                                                            </xsl:attribute>
+                                                                            <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref"/>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </xsl:if>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+                                                <!-- Optional Image Column -->
+                                                <div class="col-md-6 text-center">
+                                                    <xsl:if test="tei:graphic/@url">
+                                                        <img>
+                                                            <xsl:attribute name="src">
+                                                                <xsl:value-of select="tei:graphic/@url"/>
+                                                            </xsl:attribute>
+                                                            <xsl:attribute name="alt">Bild zur Liste</xsl:attribute>
+                                                            <xsl:attribute name="class">img-fluid shadow rounded</xsl:attribute>
+                                                        </img>
                                                     </xsl:if>
-                                                </tbody>
-                                            </table>
+                                                </div>
+                                            </div>
                                         </div>
-
-                                        <!-- old version without table:
-                                        <p><strong>Listentypus:</strong>&#160;<xsl:value-of select="tei:note[@type='listType']"/></p>
-                                        <xsl:for-each select="tei:title[@type='alt']">
-                                            <p><strong>Alternativer Titel:</strong>&#160;<xsl:value-of select="."/></p>
-                                        </xsl:for-each>
-                                        
-                                        <p><strong>Periodikum:</strong>&#160;<xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></p>
-                                        <p><strong>ZDB-ID:</strong>&#160;<xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']"/></p>
-
-                                        <p><strong>Frühester Nachweis:</strong>&#160;<xsl:value-of select="tei:date[@type='earliestFinding']"/></p>
-                                        <p><strong>Spätester Nachweis:</strong>&#160;<xsl:value-of select="tei:date[@type='latestFinding']"/></p>
-
-                                        <p><strong>Publikationsort:</strong>&#160;<xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></p>
-                                        <p><strong>Wikidata-ID:</strong>&#160;<xsl:value-of select="tei:pubPlace/tei:placeName/tei:idno[@type='wikidata']"/></p>
-
-                                        <p><strong>Koordinaten:</strong>&#160;<xsl:value-of select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/></p>
-
-                                        <xsl:if test="tei:note[@type='digitalResource']/tei:ref">
-                                            <p><strong>Digitale Ressource:</strong>&#160; 
-                                                <a>
-                                                    <xsl:attribute name="href">
-                                                        <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref/@target"/>
-                                                    </xsl:attribute>
-                                                    <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref"/>
-                                                </a>
-                                            </p>
-                                        </xsl:if> -->
                                     </div>
                                 </div>
                             </div>
