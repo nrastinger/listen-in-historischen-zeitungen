@@ -235,14 +235,21 @@
 
                                                 <!-- Optional Image Column -->
                                                 <div class="col-md-6 text-center">
-                                                    <xsl:if test="tei:graphic/@url">
+                                                    <xsl:if test="tei:figure/tei:graphic/@url">
+                                                        <figure>
                                                         <img>
                                                             <xsl:attribute name="src">
-                                                                <xsl:value-of select="tei:graphic/@url"/>
+                                                            <xsl:value-of select="tei:figure/tei:graphic/@url"/>
                                                             </xsl:attribute>
-                                                            <xsl:attribute name="alt">Exemplarische Liste</xsl:attribute>
+                                                            <xsl:attribute name="alt">
+                                                            <xsl:value-of select="tei:figure/tei:figDesc"/>
+                                                            </xsl:attribute>
                                                             <xsl:attribute name="class">img-fluid shadow rounded</xsl:attribute>
                                                         </img>
+                                                        <figcaption>
+                                                            <xsl:value-of select="tei:figure/tei:figDesc"/>
+                                                        </figcaption>
+                                                        </figure>
                                                     </xsl:if>
                                                 </div>
                                             </div>
