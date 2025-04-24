@@ -172,8 +172,22 @@
                                                                 <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">ZDB-ID von Zeitung/Intelligenzblatt</th>
-                                                                <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']"/></td>
+                                                                <th scope="row">ZDB-ID</th>
+                                                                <td>
+                                                                    <xsl:for-each select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']">
+                                                                        <a>
+                                                                            <xsl:attribute name="href">
+                                                                                <xsl:text>https://ld.zdb-services.de/resource/</xsl:text>
+                                                                                <xsl:value-of select="."/>
+                                                                            </xsl:attribute>
+                                                                            <xsl:value-of select="."/>
+                                                                        </a>
+                                                                        <!-- Semicolon unless it's the last -->
+                                                                        <xsl:if test="position() != last()">
+                                                                            <xsl:text>; </xsl:text>
+                                                                        </xsl:if>
+                                                                    </xsl:for-each>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">Frühester Nachweis</th>
