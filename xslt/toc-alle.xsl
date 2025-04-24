@@ -155,12 +155,17 @@
                                                         <tbody>
                                                             <tr>
                                                                 <th scope="row">Listentitel</th>
-                                                                <td><xsl:value-of select="tei:title[@type='main']"/></td>
+                                                                <td><em><xsl:value-of select="tei:title[@type='main']"/></em></td>
                                                             </tr>
                                                                 <tr>
                                                                     <th scope="row">Alternativer Titel</th>
                                                                     <td>
-                                                                    <xsl:value-of select="tei:title[@type='alt']" separator="; "/>
+                                                                        <xsl:for-each select="tei:title[@type='alt']">
+                                                                            <em><xsl:value-of select="."/></em>
+                                                                            <xsl:if test="position() != last()">
+                                                                                <xsl:text>; </xsl:text>
+                                                                            </xsl:if>
+                                                                        </xsl:for-each>
                                                                     </td>
                                                                 </tr>
                                                             <tr>
@@ -202,7 +207,7 @@
                                                                 <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Wikidata-ID von Ort</th>
+                                                                <th scope="row">Wikidata-ID (Publikationsort)</th>
                                                                 <td>
                                                                 <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']" separator="; "/>
                                                                 </td>
@@ -235,7 +240,7 @@
                                                             <xsl:attribute name="src">
                                                                 <xsl:value-of select="tei:graphic/@url"/>
                                                             </xsl:attribute>
-                                                            <xsl:attribute name="alt">Bild zur Liste</xsl:attribute>
+                                                            <xsl:attribute name="alt">Exemplarische Liste</xsl:attribute>
                                                             <xsl:attribute name="class">img-fluid shadow rounded</xsl:attribute>
                                                         </img>
                                                     </xsl:if>
