@@ -44,7 +44,8 @@
                                         <div class="card-body item-center">
                                             <img src="images/open-magazine.png"
                                                 title="open-magazine.png"
-                                                alt="Open Magazine"/>
+                                                alt="Open Magazine" 
+                                                class="index-card-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Dokumentation</h5>
@@ -61,7 +62,8 @@
                                         <div class="card-body item-center">
                                             <img src="images/deco-banner.png"
                                                 title="search.png"
-                                                alt="Search Icon"/>
+                                                alt="Search Icon"
+                                                class="index-card-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Index der Listen</h5>
@@ -78,7 +80,8 @@
                                         <div class="card-body item-center">
                                             <img src="images/map.png"
                                                 title="new-icon.png"
-                                                alt="New Page Icon"/>
+                                                alt="New Page Icon"
+                                                class="index-card-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Index der Listen</h5>
