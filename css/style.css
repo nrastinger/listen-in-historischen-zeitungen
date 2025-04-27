@@ -572,8 +572,8 @@ a:hover {
 }
 
 .index-card .card-body img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
