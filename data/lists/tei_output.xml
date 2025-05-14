@@ -17,7 +17,7 @@
     <body>
       <listBibl>
         <bibl xml:id="f12" type="list">
-          <title type="main">Fremdenliste</title>
+          <title type="main">Fremdenlisten</title>
           <title type="alt">Ankommende</title>
           <title type="alt">Reisende</title>
           <note type="listType">Ankunftsliste</note>
