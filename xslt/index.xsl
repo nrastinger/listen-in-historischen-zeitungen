@@ -42,7 +42,7 @@
                                 <a href="toc-alle.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/open-magazine.png"
+                                            <img src="leiada-krozjhen-unsplash.jpg"
                                                 title="open-magazine.png"
                                                 alt="Open Magazine" 
                                                 class="index-card-img"/>
