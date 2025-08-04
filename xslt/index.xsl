@@ -39,10 +39,10 @@
                         <div class="row wrapper img_bottom">
                             <!-- Card 1 -->
                             <div class="col-md-4 col-lg-4 col-sm-12">
-                                <a href="toc-alle.html" class="index-link">
+                                <a href="about.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="leiada-krozjhen-unsplash.jpg"
+                                            <img src="images/leiada-krozjhen-unsplash.jpg"
                                                 title="open-magazine.png"
                                                 alt="Open Magazine" 
                                                 class="index-card-img"/>
@@ -57,7 +57,7 @@
 
                             <!-- Card 2 -->
                             <div class="col-md-4 col-lg-4 col-sm-12">
-                                <a href="bibliographie.html" class="index-link">
+                                <a href="toc-alle.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
                                             <img src="images/deco-banner.png"
