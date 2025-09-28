@@ -16,31 +16,6 @@
   <text>
     <body>
       <listBibl>
-        <bibl xml:id="f12" type="list">
-          <title type="main">test</title>
-          <title type="alt">test</title>
-          <note type="listType">test</note>
-          <note type="source">
-            <bibl type="periodical">
-              <title>test</title>
-              <idno type="zdb">test</idno>
-            </bibl>
-          </note>
-          <date type="earliestFinding" when="1800">1800</date>
-          <date type="latestFinding" when="1810">1810</date>
-          <pubPlace>
-            <placeName>
-              <name>Wien</name>
-              <idno type="wikidata">Q3650</idno>
-            </placeName>
-            <location>
-              <geo>48.208333 16.3725</geo>
-            </location>
-          </pubPlace>
-          <note type="digitalResource">
-            <ref target="https://digipress.digitale-sammlungen.de/">digiPress</ref>
-          </note>
-        </bibl>
         <bibl xml:id="f1" type="list">
           <title type="main">"Königstädtisches Theater."</title>
           <note type="listType">Theaterprogramm</note>
@@ -75,7 +50,7 @@
           <date type="latestFinding" when="1850">1850</date>
           <pubPlace>
             <placeName>
-              <name>nan</name>
+              <name>Köln</name>
               <idno type="wikidata">nan</idno>
             </placeName>
             <location>
