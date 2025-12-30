@@ -258,10 +258,6 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Koordinaten</th>
-                                                                <td><xsl:value-of select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/></td>
-                                                            </tr>
-                                                            <tr>
                                                                 <th scope="row">Digitale Sammlung</th>
                                                                 <td>
                                                                     <xsl:value-of select="tei:note[@type='DigitaleSammlung']"/>
