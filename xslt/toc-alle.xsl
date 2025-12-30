@@ -114,14 +114,7 @@
                         }
                     });
                     </script>
-                    <!--old version 
-                    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"/>
-                    <script type="text/javascript" src="js/dt.js"/>
-                    <script>
-                        $(document).ready(function () {
-                        createDataTable('tocTable');
-                        });
-                    </script>--> 
+
                 </div>
             </body>
         </html>
@@ -173,8 +166,18 @@
                                                                 <td><xsl:value-of select="tei:note[@type='listType']"/></td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Zeitung/Intelligenzblatt</th>
-                                                                <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
+                                                                <th scope="row">Zeitungs-/Intelligenzblattunternehmen</th>
+                                                                <td>
+                                                                    <xsl:value-of
+                                                                    select="tei:relatedItem[@type='Periodikum']/tei:bibl/tei:title[@type='Unternehmen']"/>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Zeitungs-/Intelligenzblatttitel</th>
+                                                                <td>
+                                                                    <xsl:value-of
+                                                                    select="tei:relatedItem[@type='Periodikum']/tei:bibl/tei:title[@type='Titel']"/>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">ZDB-ID</th>
@@ -216,19 +219,18 @@
                                                                 <th scope="row">Koordinaten</th>
                                                                 <td><xsl:value-of select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/></td>
                                                             </tr>
-                                                            <xsl:if test="tei:note[@type='digitalResource']/tei:ref">
-                                                                <tr>
-                                                                    <th scope="row">Verfügbar über</th>
-                                                                    <td>
-                                                                        <a>
-                                                                            <xsl:attribute name="href">
-                                                                                <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref/@target"/>
-                                                                            </xsl:attribute>
-                                                                            <xsl:value-of select="tei:note[@type='digitalResource']/tei:ref"/>
-                                                                        </a>
-                                                                    </td>
-                                                                </tr>
-                                                            </xsl:if>
+                                                            <tr>
+                                                                <th scope="row">Digitale Sammlung</th>
+                                                                <td>
+                                                                    <xsl:value-of select="tei:note[@type='DigitaleSammlung']"/>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Notiz</th>
+                                                                <td>
+                                                                    <xsl:value-of select="tei:note[@type='note']" separator="; "/>
+                                                                </td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
