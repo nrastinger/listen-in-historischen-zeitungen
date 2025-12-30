@@ -89,7 +89,7 @@
                                                   <xsl:value-of select="tei:date[@type='latestFinding']"/>
                                                 </td>
                                                 <td>
-                                                    <xsl:for-each select="tei:pubPlace/tei:placeName">
+                                                    <xsl:for-each select="tei:relatedItem[@type='Periodikum']/tei:bibl[@type='periodical']/tei:pubPlace/tei:placeName">
                                                     <xsl:variable name="place" select="normalize-space(tei:name)"/>
                                                     <xsl:variable name="qid" select="normalize-space(tei:idno[@type='wikidata'])"/>
 
@@ -140,8 +140,7 @@
         <xsl:for-each select="document('../data/lists/tei_output.xml')//*:listBibl/*:bibl">
             <xsl:variable name="id" select="@xml:id"/>
             <xsl:variable name="title" select="normalize-space(tei:title[@type='main'])"/>
-            <xsl:variable name="source" select="normalize-space(tei:note[@type='source']/tei:bibl/tei:title)"/>
-            
+            <xsl:variable name="source" select="normalize-space(tei:relatedItem[@type='Periodikum']/tei:bibl[@type='periodical']/tei:title[@type='Unternehmen'])"/>
             <xsl:result-document href="{$id}.html">
                 <html xmlns="http://www.w3.org/1999/xhtml">
                     <head>
@@ -200,7 +199,7 @@
                                                             <tr>
                                                                 <th scope="row">ZDB-ID</th>
                                                                 <td>
-                                                                    <xsl:for-each select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']">
+                                                                    <xsl:for-each select="tei:relatedItem[@type='Periodikum']/tei:bibl[@type='periodical']/tei:idno[@type='zdb']">
                                                                         <a>
                                                                             <xsl:attribute name="href">
                                                                                 <xsl:text>https://ld.zdb-services.de/resource/</xsl:text>
@@ -225,12 +224,8 @@
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">Publikationsort</th>
-                                                                <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">Publikationsort</th>
                                                                 <td>
-                                                                    <xsl:for-each select="tei:pubPlace/tei:placeName">
+                                                                    <xsl:for-each select="tei:relatedItem[@type='Periodikum']/tei:bibl[@type='periodical']/tei:pubPlace/tei:placeName">
                                                                     <xsl:variable name="place" select="normalize-space(tei:name)"/>
                                                                     <xsl:variable name="qid" select="normalize-space(tei:idno[@type='wikidata'])"/>
 
@@ -249,12 +244,6 @@
                                                                         <xsl:text>, </xsl:text>
                                                                     </xsl:if>
                                                                     </xsl:for-each>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">Wikidata-ID (Publikationsort)</th>
-                                                                <td>
-                                                                <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:idno[@type='zdb']" separator="; "/>
                                                                 </td>
                                                             </tr>
                                                             <tr>

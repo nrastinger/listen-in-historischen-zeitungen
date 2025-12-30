@@ -47,9 +47,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <xsl:for-each select="//tei:bibl[tei:pubPlace/tei:location/tei:geo]">
+                                        <xsl:for-each select="//tei:bibl[tei:relatedItem[@type='Periodikum']/tei:bibl/tei:pubPlace/tei:location/tei:geo]">
                                         <xsl:variable name="bibl" select="."/>
-                                        <xsl:for-each select="tei:pubPlace[tei:location/tei:geo]">
+                                        <xsl:for-each select="tei:relatedItem[@type='Periodikum']/tei:bibl/tei:pubPlace[tei:location/tei:geo]">
                                             <xsl:variable name="place" select="normalize-space(tei:placeName/tei:name)"/>
                                             <xsl:variable name="qid" select="normalize-space(tei:placeName/tei:idno[@type='wikidata'])"/>
 
@@ -61,15 +61,7 @@
                                             <tr>
                                             <td>
                                                 <xsl:value-of select="$bibl/tei:title[@type='main']"/>
-                                                <xsl:if test="$place != ''">
-                                                <xsl:text> — </xsl:text>
-                                                <xsl:value-of select="$place"/>
-                                                </xsl:if>
-                                                <xsl:if test="$qid != ''">
-                                                <xsl:text> (</xsl:text><xsl:value-of select="$qid"/><xsl:text>)</xsl:text>
-                                                </xsl:if>
                                             </td>
-
                                             <td>
                                                 <xsl:value-of select="$bibl/tei:relatedItem[@type='Periodikum']/tei:bibl/tei:title[@type='Unternehmen']"/>
                                             </td>
@@ -82,9 +74,14 @@
                                             <td style="display:none;">
                                             <xsl:value-of
                                                 select="string-join(
-                                                        $bibl/tei:relatedItem[@type='Periodikum']/tei:bibl/tei:pubPlace/tei:placeName
-                                                            ! (normalize-space(tei:name) || ' (' || normalize-space(tei:idno[@type='wikidata']) || ')'),
-                                                        '; '
+                                                            $bibl/tei:relatedItem[@type='Periodikum']/tei:bibl/tei:pubPlace/tei:placeName
+                                                            ! (
+                                                                normalize-space(tei:name) ||
+                                                                (if (normalize-space(tei:idno[@type='wikidata']) != '')
+                                                                then ' (' || normalize-space(tei:idno[@type='wikidata']) || ')'
+                                                                else '')
+                                                                ),
+                                                            '; '
                                                         )"/>
                                             </td>
                                             </tr>
