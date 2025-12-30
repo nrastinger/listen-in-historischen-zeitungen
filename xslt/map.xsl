@@ -46,18 +46,40 @@
                                     </thead>
                                     <tbody>
                                         <xsl:for-each select="//tei:bibl[tei:pubPlace/tei:location/tei:geo]">
-                                            <xsl:variable name="geo" select="normalize-space(tei:pubPlace/tei:location/tei:geo)"/>
-                                            <xsl:variable name="lat" select="replace(tokenize($geo, ' ')[1], ',', '.')"/>
-                                            <xsl:variable name="lon" select="replace(tokenize($geo, ' ')[2], ',', '.')"/>
+                                        <xsl:variable name="bibl" select="."/>
+                                        <xsl:for-each select="tei:pubPlace[tei:location/tei:geo]">
+                                            <xsl:variable name="place" select="normalize-space(tei:placeName/tei:name)"/>
+                                            <xsl:variable name="qid" select="normalize-space(tei:placeName/tei:idno[@type='wikidata'])"/>
+
+                                            <!-- IMPORTANT: pick geo relative to this pubPlace -->
+                                            <xsl:variable name="geo" select="normalize-space(tei:location/tei:geo)"/>
+                                            <xsl:variable name="lat" select="replace(tokenize($geo, '\s+')[1], ',', '.')"/>
+                                            <xsl:variable name="lon" select="replace(tokenize($geo, '\s+')[2], ',', '.')"/>
+
                                             <tr>
-                                                <td><xsl:value-of select="tei:title[@type='main']"/></td>
-                                                <td><xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/></td>
-                                                <td><xsl:value-of select="tei:date[@type='earliestFinding']"/></td>
-                                                <td><xsl:value-of select="tei:date[@type='latestFinding']"/></td>
-                                                <td><xsl:value-of select="$lat"/></td>
-                                                <td><xsl:value-of select="$lon"/></td>
+                                            <td>
+                                                <xsl:value-of select="$bibl/tei:title[@type='main']"/>
+                                                <xsl:if test="$place != ''">
+                                                <xsl:text> — </xsl:text>
+                                                <xsl:value-of select="$place"/>
+                                                </xsl:if>
+                                                <xsl:if test="$qid != ''">
+                                                <xsl:text> (</xsl:text><xsl:value-of select="$qid"/><xsl:text>)</xsl:text>
+                                                </xsl:if>
+                                            </td>
+
+                                            <td>
+                                                <xsl:value-of select="$bibl/tei:relatedItem[@type='Periodikum']/tei:bibl/tei:title[@type='Unternehmen']"/>
+                                            </td>
+
+                                            <td><xsl:value-of select="$bibl/tei:date[@type='earliestFinding']"/></td>
+                                            <td><xsl:value-of select="$bibl/tei:date[@type='latestFinding']"/></td>
+                                            <td><xsl:value-of select="$lat"/></td>
+                                            <td><xsl:value-of select="$lon"/></td>
                                             </tr>
                                         </xsl:for-each>
+                                        </xsl:for-each>
+                                        
                                     </tbody>
                                 </table>
                             </div>
