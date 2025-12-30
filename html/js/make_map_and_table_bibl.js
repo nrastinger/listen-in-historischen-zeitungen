@@ -29,33 +29,45 @@ function build_map_and_table(map_cfg, table_cfg, wms_cfg = null, tms_cfg = null)
     shadowSize: [41, 41]
   });
 
-  const tableRows = tableElement.querySelectorAll("tbody tr");
+const tableRows = tableElement.querySelectorAll("tbody tr");
 
-  tableRows.forEach(row => {
-    const cells = row.querySelectorAll("td");
-    const title = cells[0]?.textContent;
-    const newspaper = cells[1]?.textContent;
-    const earliest = cells[2]?.textContent;
-    const latest = cells[3]?.textContent;
-    const lat = parseFloat(cells[4]?.textContent);
-    const lon = parseFloat(cells[5]?.textContent);
+tableRows.forEach(row => {
+  const cells = row.querySelectorAll("td");
 
-    if (!isNaN(lat) && !isNaN(lon)) {
-      const marker = L.marker([lat, lon], { icon: blackIcon });
-      marker.bindPopup(
-        "<strong>" + title + "</strong><br/>" +
-        "<strong>Medium:</strong> " + newspaper + "<br/>" +
-        "Nachgewiesen: " + earliest + "-" + latest
-      );
-      markers.addLayer(marker);
+  // Visible columns
+  const listTitle = (cells[0]?.textContent || "").trim();
+  const company = (cells[1]?.textContent || "").trim();
+  const earliest = (cells[2]?.textContent || "").trim();
+  const latest = (cells[3]?.textContent || "").trim();
+  const lat = parseFloat((cells[4]?.textContent || "").trim());
+  const lon = parseFloat((cells[5]?.textContent || "").trim());
 
-      // Optional: zoom on click
-      row.addEventListener("click", () => {
-        map.setView([lat, lon], map_cfg.on_row_click_zoom);
-        marker.openPopup();
-      });
-    }
-  });
+  // Hidden columns (you need to output these in map.xsl)
+  const id = (cells[6]?.textContent || "").trim();                 // xml:id
+  const companyPlaces = (cells[7]?.textContent || "").trim();      // "Wien (Q...); Budapest (Q...)"
+
+  if (!isNaN(lat) && !isNaN(lon)) {
+    const marker = L.marker([lat, lon], { icon: blackIcon });
+
+    const entryHref = id ? `${id}.html` : "#";
+
+    const popupHtml =
+      `<a href="${entryHref}"><strong><em>${listTitle}</em></strong></a><br/>` +
+      `<strong>Periodikum:</strong> <em>${company}</em><br/>` +
+      `<strong>Publikationsorte:</strong> ${companyPlaces}<br/>` +
+      `<strong>Frühester Nachweis:</strong> ${earliest}<br/>` +
+      `<strong>Spätester Nachweis:</strong> ${latest}`;
+
+    marker.bindPopup(popupHtml);
+
+    markers.addLayer(marker);
+
+    row.addEventListener("click", () => {
+      map.setView([lat, lon], map_cfg.on_row_click_zoom);
+      marker.openPopup();
+    });
+  }
+});
 
   map.addLayer(markers);
 

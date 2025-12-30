@@ -42,6 +42,8 @@
                                             <th>Spätester Nachweis</th>
                                             <th>Lat</th>
                                             <th>Lng</th>
+                                            <th style="display:none;">ID</th>
+                                            <th style="display:none;">CompanyPlaces</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -76,6 +78,15 @@
                                             <td><xsl:value-of select="$bibl/tei:date[@type='latestFinding']"/></td>
                                             <td><xsl:value-of select="$lat"/></td>
                                             <td><xsl:value-of select="$lon"/></td>
+                                            <td style="display:none;"><xsl:value-of select="$bibl/@xml:id"/></td>
+                                            <td style="display:none;">
+                                            <xsl:value-of
+                                                select="string-join(
+                                                        $bibl/tei:relatedItem[@type='Periodikum']/tei:bibl/tei:pubPlace/tei:placeName
+                                                            ! (normalize-space(tei:name) || ' (' || normalize-space(tei:idno[@type='wikidata']) || ')'),
+                                                        '; '
+                                                        )"/>
+                                            </td>
                                             </tr>
                                         </xsl:for-each>
                                         </xsl:for-each>
