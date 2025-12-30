@@ -80,7 +80,7 @@
                                                     <xsl:value-of select="tei:note[@type='listType']"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="tei:note[@type='source']/tei:bibl/tei:title"/>
+                                                  <xsl:value-of select="tei:relatedItem[@type='Periodikum']/tei:bibl/tei:title[@type='Unternehmen']"/>
                                                 </td>
                                                 <td>
                                                   <xsl:value-of select="tei:date[@type='earliestFinding']"/>
@@ -89,7 +89,25 @@
                                                   <xsl:value-of select="tei:date[@type='latestFinding']"/>
                                                 </td>
                                                 <td>
-                                                  <xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/>
+                                                    <xsl:for-each select="tei:pubPlace/tei:placeName">
+                                                    <xsl:variable name="place" select="normalize-space(tei:name)"/>
+                                                    <xsl:variable name="qid" select="normalize-space(tei:idno[@type='wikidata'])"/>
+
+                                                    <xsl:choose>
+                                                    <xsl:when test="$qid != ''">
+                                                    <a href="https://www.wikidata.org/wiki/{$qid}">
+                                                    <xsl:value-of select="$place"/><xsl:text> (</xsl:text><xsl:value-of select="$qid"/><xsl:text>)</xsl:text>
+                                                    </a>
+                                                    </xsl:when>
+                                                    <xsl:otherwise>
+                                                        <xsl:value-of select="$place"/>
+                                                    </xsl:otherwise>
+                                                    </xsl:choose>
+
+                                                    <xsl:if test="position() != last()">
+                                                        <xsl:text>, </xsl:text>
+                                                        </xsl:if>
+                                                        </xsl:for-each>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>
@@ -208,6 +226,30 @@
                                                             <tr>
                                                                 <th scope="row">Publikationsort</th>
                                                                 <td><xsl:value-of select="tei:pubPlace/tei:placeName/tei:name"/></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">Publikationsort</th>
+                                                                <td>
+                                                                    <xsl:for-each select="tei:pubPlace/tei:placeName">
+                                                                    <xsl:variable name="place" select="normalize-space(tei:name)"/>
+                                                                    <xsl:variable name="qid" select="normalize-space(tei:idno[@type='wikidata'])"/>
+
+                                                                    <xsl:choose>
+                                                                    <xsl:when test="$qid != ''">
+                                                                        <a href="https://www.wikidata.org/wiki/{$qid}">
+                                                                        <xsl:value-of select="$place"/><xsl:text> (</xsl:text><xsl:value-of select="$qid"/><xsl:text>)</xsl:text>
+                                                                        </a>
+                                                                    </xsl:when>
+                                                                    <xsl:otherwise>
+                                                                        <xsl:value-of select="$place"/>
+                                                                    </xsl:otherwise>
+                                                                    </xsl:choose>
+
+                                                                    <xsl:if test="position() != last()">
+                                                                        <xsl:text>, </xsl:text>
+                                                                    </xsl:if>
+                                                                    </xsl:for-each>
+                                                                </td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">Wikidata-ID (Publikationsort)</th>
